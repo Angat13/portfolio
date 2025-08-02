@@ -1,0 +1,199 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 4rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: beige; /* ✅ Fixed beige background */
+  border-bottom: 1px solid rgba(187, 62, 62, 0.05);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.navbar.scrolled {
+  padding: 0.8rem 4rem;
+  background-color: beige; /* ✅ Keep beige when scrolled */
+  backdrop-filter: none; /* Remove blur */
+  -webkit-backdrop-filter: none;
+}
+
+/* Keep the rest of your styles the same below */
+.navbar-logo {
+  color: #000; /* ✅ Dark text for contrast on beige */
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  background: linear-gradient(135deg, #1e90ff 0%, #00f7ff 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.2rem 0;
+}
+
+/* rest of your navbar styles remain unchanged... */
+
+
+.navbar-logo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #1e90ff, #00f7ff);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.navbar-logo:hover {
+  transform: translateY(-2px);
+}
+
+.navbar-logo:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  position: relative;
+}
+
+.navbar-links li a {
+  color: rgba(14, 13, 13, 0.9);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar-links li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  transform: scale(0.9);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: -1;
+}
+
+.navbar-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0.2rem;              /* sit a bit above the bottom; tweak if needed */
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 60%;
+  height: 2px;
+  background: #000;            /* ← black line */
+  transition: transform 0.25s ease;
+}
+
+/* show underline on hover/focus/active */
+.navbar-links li a:hover::after,
+.navbar-links li a:focus::after,
+.navbar-links li a.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+
+
+.navbar-links li a:hover::before,
+.navbar-links li a:focus::before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.navbar-links li a:hover::after,
+.navbar-links li a:focus::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.navbar-links li a.active {
+  color: #fff;
+  font-weight: 600;
+}
+
+.navbar-links li a.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 1rem 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .navbar.scrolled {
+    padding: 0.8rem 2rem;
+  }
+  
+  .navbar-logo {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .navbar-links {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .navbar-links li a {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Animation for navbar items */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-links li {
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+.navbar-links li:nth-child(1) { animation-delay: 0.1s; }
+.navbar-links li:nth-child(2) { animation-delay: 0.2s; }
+.navbar-links li:nth-child(3) { animation-delay: 0.3s; }
+.navbar-links li:nth-child(4) { animation-delay: 0.4s; }
+.navbar-links li:nth-child(5) { animation-delay: 0.5s; }

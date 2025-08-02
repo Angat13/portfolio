@@ -1,0 +1,124 @@
+/* ===== Russell Brand–style theme tokens ===== */
+:root {
+  --paper: #ece9df;       /* warm off-white background */
+  --ink:   #0c0f12;       /* very dark text */
+  --ink-60:#2d3136;       /* secondary text */
+  --card:  #f3f1ea;       /* subtle card fill */
+  --rule:  rgba(12,15,18,0.12);
+  --pill:  #0c0f12;       /* button / accent background */
+  --pillText: #fff;
+
+  --display: "Playfair Display", Georgia, serif;
+  --sans:    "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* ===== Section ===== */
+.tech-stack-section {
+  padding: clamp(4rem, 6vw, 6rem) 5%;
+  background: var(--paper);
+  color: var(--ink);
+  text-align: center;
+  z-index: 2;
+  font-family: var(--sans);
+}
+
+/* ===== Title (big serif) ===== */
+.stack-title {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: clamp(2.4rem, 6vw, 5.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  margin: 0 0 2.25rem;
+  color: var(--ink);
+  text-shadow: none;       /* remove neon glow */
+}
+
+/* Optional subtitle style if you have one under the H1 */
+.stack-subtitle {
+  max-width: 60ch;
+  margin: 0 auto 2.75rem;
+  color: var(--ink-60);
+  font-size: clamp(1rem, 1.4vw, 1.125rem);
+  line-height: 1.6;
+}
+
+/* ===== Grid ===== */
+.stack-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(1rem, 2.5vw, 2rem);
+}
+
+/* ===== Cards ===== */
+.stack-category {
+  background: var(--card);
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+  width: min(320px, 92vw);
+  box-shadow: 0 1px 0 var(--rule), 0 8px 24px rgba(12, 15, 18, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: left;
+}
+
+.stack-category:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1px 0 var(--rule), 0 16px 36px rgba(12, 15, 18, 0.08);
+}
+
+.stack-category h3 {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.15;
+  margin: 0 0 0.75rem;
+  color: var(--ink);
+  letter-spacing: 0;
+}
+
+/* Optional thin rule like screenshot */
+.stack-category .rule {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 1.25rem 0 0.75rem;
+}
+
+/* ===== Icons row ===== */
+.icon-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+.stack-icon {
+  width: 56px;
+  height: 56px;
+  padding: 8px;
+  border-radius: 12px;
+  background: rgba(12, 15, 18, 0.04);
+  box-shadow: inset 0 0 0 1px rgba(12, 15, 18, 0.06);
+  transition: transform 0.2s ease, filter 0.2s ease;
+  object-fit: contain;
+}
+
+.stack-icon:hover {
+  transform: scale(1.08);
+  filter: brightness(1.05);
+}
+
+/* ===== Pill button (matches “Watch Now”) ===== */
+.pill-btn {
+  display: inline-block;
+  margin-top: 1.75rem;
+  padding: 0.9rem 1.25rem;
+  border-radius: 999px;
+  background: var(--pill);
+  color: var(--pillText);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: transform 0.12s ease, background 0.2s ease;
+}
+.pill-btn:hover { background: #080a0c; transform: translateY(-1px); }
+.pill-btn:active { transform: translateY(0); }

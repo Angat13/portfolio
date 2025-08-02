@@ -1,0 +1,81 @@
+.about-me-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 8rem 5%;
+  background: transparent; /* ✅ Let body background be visible */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 10;
+}
+
+
+
+/* Layout */
+.about-me-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+  max-width: 1400px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.intro-title {
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+}
+
+.highlight-name {
+  display: inline-block;
+  font-size: 5rem;
+  color: #ffe0b2;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 2px;
+}
+
+.intro-description {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  line-height: 2;
+  max-width: 600px;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #e0e0e0;
+}
+
+.intro-subnote {
+  margin-top: 3rem;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #bbb;
+}
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  font-size: larger;
+  gap: .5rem;
+  padding: .8rem 1.1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,.1);
+  background: #ffe0b2;
+  color: #0d0d0d;
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.resume-btn:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(0,0,0,.2); }
