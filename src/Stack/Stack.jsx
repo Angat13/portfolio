@@ -3,16 +3,17 @@ import React from "react";
 import "./MyStack.css";
 
 const stack = {
-  "Cloud Platforms": ["AWS", "ec2"],
-  "Source Control & Platforms": ["gitHub", "gitlab"],
-  "CI/CD & GitOps": ["jenkins", "argo-cd"], // add "github-actions", "gitlab-ci" if you have icons
+  "Cloud Platforms": ["aws", "ec2"],
+  "Source Control & Platforms": ["github", "gitlab"],
+  "CI/CD & GitOps": ["jenkins", "argo-cd"],
   "Containerization & Orchestration": ["docker", "kubernetes"],
   "IaC & Configuration": ["terraform", "ansible"],
-  "Security & Quality": ["Trivy", "SonarQube", "OWASP"], // or "owasp-zap"
+  "Security & Quality": ["trivy", "sonarqube", "owasp"],
   "Monitoring": ["prometheus", "grafana"],
-  "Messaging & Streaming": ["Kafka"],
+  "Messaging & Streaming": ["kafka"],
   "OS ,Scripting & Automation": ["bash", "python", "linux"]
 };
+
 
 
 
