@@ -12,7 +12,7 @@ const projects = [
       "UpholicTech is a heavy stock-based application that provides a platform for users to manage their stock portfolios effectively. It offers features like real-time stock tracking, portfolio management, and market analysis tools.",
     tools: "AWS, Docker,Terraform, Jenkins, Trivy, SonarQube, OWASP ZAP, Prometheus.",
     toolColor: "orange",
-    image: "/icons/UpholicTech.jpeg",
+    image: "/Icons/UpholicTech.jpeg",
     link: "https://www.upholictech.com"
   },
   {
