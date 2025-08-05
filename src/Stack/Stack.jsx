@@ -3,7 +3,7 @@ import React from "react";
 import "./MyStack.css";
 
 const stack = {
-  "Cloud Platforms": ["aws", "ec2"],
+  "Cloud Platforms": ["aws" ],
   "Source Control & Platforms": ["github", "gitlab"],
   "CI/CD & GitOps": ["jenkins", "argo-cd"],
   "Containerization & Orchestration": ["docker", "kubernetes"],
