@@ -21,7 +21,7 @@ const projects = [
       "This project demonstrates a microservice architecture using Node.js, Python, React (Frontend), and MongoDB, all containerized with Docker and orchestrated with Docker Compose.",
     tools: "AWS, Docker, Jenkins, Terraform, React, Node.js, Express.js, Python, MongoDB",
     toolColor: "orange",
-    image: "/images/tekture.png",
+    image: "/Icons/Carecraft.jpg",
     link: "https://github.com/Angat13/Microservice-Architecture-DevOps"
   },
   {
@@ -30,7 +30,7 @@ const projects = [
       "CareCraft is a hospital-focused service platform designed to enhance the well-being of elderly patients admitted to the hospital.",
     tools: "AWS, Docker, Terraform, React, Node.js, Express.js, MongoDB",
     toolColor: "orange",
-    image: "/images/asekio.png",
+    image: "/Icons/Home.jpg",
     link: "https://github.com/Angat13/CareCraft"
   }
 ];
